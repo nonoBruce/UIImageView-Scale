@@ -23,6 +23,9 @@
 @implementation ViewController
 #pragma mark - 页面视图初始化
 -(void)initContainView {
+    self.scrollView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);
+    self.scrollView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2.0, [UIScreen mainScreen].bounds.size.height/2.0);
+    
     CGRect rect = self.scrollView.frame;
     rect.origin.x = 0;
     rect.origin.y = 0;
@@ -82,7 +85,7 @@
     self.scrollView.frame = scrollViewRect;
     self.scrollView.center = point;
     
-    NSLog(@"scrollViewRect----%f----%f----%f----%f",self.scrollView.frame.origin.x,self.scrollView.frame.origin.y,self.scrollView.frame.size.width,self.scrollView.frame.size.height);
+//    NSLog(@"scrollViewRect----%f----%f----%f----%f",self.scrollView.frame.origin.x,self.scrollView.frame.origin.y,self.scrollView.frame.size.width,self.scrollView.frame.size.height);
     
     
     
